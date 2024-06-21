@@ -1,0 +1,86 @@
+
+<h3> Goal of Project:  </h3>
+
+We are given signal data and background data, and we plot it against many variables.
+We then make cuts given these variables to try to isolate the signal as best as possible.
+We are left with a chart that describes each cut, and the impact of the cut on the data
+
+Final Chart: 
+	
+	Cut #  | Num Events Background |  Num Events Signal |Significance
+
+Variables we have:
+
+*    Pt($j_0$) * Pt($j_1$)  ]
+*    $\eta$($j_0$), \eta$($j_1$)
+*    $\phi$($j_0$), $\phi$($j_1$)
+*    $M_{ET}$, $\phi$($M_{ET}$)
+*   $\eta$($j_0$) *  $\eta$($j_1$)
+*  abs($\Delta$($j_0$,$j_1$))
+*  Invariable Mass
+	
+
+<h2>Procedure/Steps of the Code: </h2>
+
+
+**1)** Get Data and name it/organize it
+
+**2)** Apply weights to the data
+
+**3)** Plot all variables (Y axis num Events, X Axis variable value)
+
+**4)** We iteratively plot the data and make cuts.
+
+**5)** We've finished cuts, we can make the full "cut chart"
+ 
+
+First note that we will plot invariable mass after every cut
+
+<h5> Plotting </h5>
+
+
+
+1) Plot the variable  
+
+2) Make another plot that shows Significance   vs   Cutting point
+
+ Using this 2nd graph we can see where we should cut.
+ We apply the cut to the data, and then use this newly cut data for the next variable.
+
+Here is the order in which we plot, cut, iteratively
+
+1. $\eta$($j_0$) *  $\eta$($j_1$)
+2. abs($\Delta$($j_0$,$j_1$))
+3. Pt($j_0$)
+4. Pt($j_1$)
+5. $M_{ET}$,
+
+As we do this, we make sure to update our final output "cut chart"
+
+---
+
+
+
+
+
+ 
+
+
+<h3> Important Technologies </h3>
+
+* upRoot
+* numpy
+* hist
+* coffea
+* dask
+
+
+Useful Resources: 
+ * Learn Coffea: https://fisindico.uniandes.edu.co/event/13/contributions/82/attachments/108/138/uniandes2022_coffea.pdf
+
+ * Uproot and Awkward Arrays: https://www.youtube.com/watch?v=s47Nz0h0vcg
+
+ 
+
+
+
