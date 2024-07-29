@@ -13,6 +13,9 @@ def calculateWeight(num_events, effective_area, lumi = 300):
     return effective_area * lumi / num_events
 
 
+def getWeightAsArray(weight, numElems):
+    return np.full(num_elems, weight)
+
 def applyWeight(data, weight):
     return data * weight;
 
