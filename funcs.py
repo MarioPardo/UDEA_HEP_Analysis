@@ -4,9 +4,8 @@ import matplotlib as plt
 
 
 
-def calculateSignificance(s,b):
-    return s/np.sqrt(s + b)
-
+def calculateSignificance(numSig,numBkg):
+    return numSig/np.sqrt(numSig + numBkg)
 
 
 def calculateWeight(num_events, effective_area, lumi):
