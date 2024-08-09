@@ -1,0 +1,25 @@
+1) Connect to remote server via ssh
+    ssh username@serverip
+
+2)Go into the required folder, in this case its PhenoTools/MC_Samples/
+    Do this using cd command 
+
+3)Start Jupyter notebook
+    using the command: jupyter notebook
+
+4) Inspect output for port number.
+    Something like: 
+        [I 2024-08-09 10:43:19.956 ServerApp] Jupyter Server 2.14.2 is running at:
+        [I 2024-08-09 10:43:19.956 ServerApp] http://localhost:8888/tree?token=51088cff595f9e6446ebf8867cadde7ff50de145f715b9ee
+
+
+    here our port number is 8888
+
+5) Port forward from local machine.
+    On local machine, in a new terminal window, use the command
+    ssh -L portnumber:localhost:portnumber username@serverip
+    for example: ssh -L 8888:localhost:8888 joseruiz@181.118.159.243
+
+6) On a web broser, paste the http://localhost address from above
+
+7) Sometimes it will ask for token, which is in said address
