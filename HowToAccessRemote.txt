@@ -1,5 +1,6 @@
 1) Connect to remote server via ssh
     ssh username@serverip
+    # ssh joseruiz@181.118.159.243
 
 2)Go into the required folder, in this case its PhenoTools/MC_Samples/
     Do this using cd command 
